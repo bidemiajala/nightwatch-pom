@@ -2,7 +2,7 @@
 
 ## Objective
 
-    To validate and ensure an e-commerce website is fully functional, automated test cases should ensure key user flows are performing as expected. 
+    To validate and ensure an e-commerce website is fully functional, automated test cases should ensure key user flows are performing as expected using Nightwatch JS.
     The user should be able to search for a product and add to cart.
 
 ## Test Cases
