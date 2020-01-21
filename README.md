@@ -7,7 +7,7 @@
     The user should be able to search for a product and add to cart.
 
 ## Test Strategy
-### These are the actions the points to consider while automating a wordpress site:
+### These are the points to consider while automating a wordpress site:
 1) Based on `permalinks` configuration, assert for correctness. For instance, product permalinks contain the product name but hyphenated. This can be achieved making use of concatenation and textTransform.
 2) Verify the arangement of the menu being used by making use of indexes. Assert for which comes first, second... (`nth item` approach works here).
 3) For wordpress sites that handle authentication, the sign-up and sign-in fields should be tested. Positive and negative tests should be considered. For a login test, the following scenarios should be considered:
