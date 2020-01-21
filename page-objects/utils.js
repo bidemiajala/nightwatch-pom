@@ -4,7 +4,7 @@ const util = function(browser) {
     //Data
     const productName = 'Oplee White Power Wireless'
     const quantity = '3'
-    const addToCartSuccessMessage = quantity + ' × ' + productName + ' have been added to your cart.'
+    const addToCartSuccessMessage = `${quantity} × “${productName}” have been added to your cart.`
 
     //Elements
     const homePageSearchBox = '#apus-header > div.wrapper-large > div > div > div.header-bottom.clearfix > div.col-md-7 > div > form > div.main-search > div > span > input.apus-search.form-control.apus-autocompleate-input.tt-input'
