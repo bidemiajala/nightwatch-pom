@@ -1,14 +1,14 @@
 {
   "name": "pom-tests",
   "version": "1.0.0",
-  "description": "Page object model example using Nightwatch JS",
+  "description": "Page object model for automating an e-commerce site using Nightwatch JS",
   "main": "index.js",
   "scripts": {
     "test": "nightwatch"
   },
   "repository": {
     "type": "git",
-    "url": "/Users/bidemi/Documents/Automation/nw_tests"
+    "url": "/Users/bidemi/Documents/Automation/andela_wp"
   },
   "author": "Bidemi Ajala",
   "license": "ISC",
