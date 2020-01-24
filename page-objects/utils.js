@@ -1,30 +1,21 @@
-//Contains all elements and test data
-const util = function(browser) {
+//All functions/actions go here and 
 
-    //Data
-    const productName = 'Oplee White Power Wireless'
-    const quantity = '3'
-    const addToCartSuccessMessage = `${quantity} × “${productName}” have been added to your cart.`
+const data = require('./data'); //Imports data used
+const elements = require('./elements') //Imports elements used
 
-    //Elements
-    const homePageSearchBox = '#apus-header > div.wrapper-large > div > div > div.header-bottom.clearfix > div.col-md-7 > div > form > div.main-search > div > span > input.apus-search.form-control.apus-autocompleate-input.tt-input'
-    const searchButton = '#apus-header > div.wrapper-large > div > div > div.header-bottom.clearfix > div.col-md-7 > div > form > button'
-    const productTitle = '#product-741 > div.row.top-content > div.col-md-5.col-xs-12 > div > div > h1'
-    const quantityTextBox = 'input[title=Qty]'
-    const addToCartButton = '.single_add_to_cart_button'
-    const addToCartSuccessMessageField = '.woocommerce-message'
+const util = function (browser) {
 
     //Launches the browser and visits the specified url
     this.openBrowser = function () {
         browser
             .windowMaximize()
-            .url('https://andela.netface.co/')
+            .url(data.baseURL)
             .waitForElementVisible('body', 2000, 'Page loaded successfully')
             .assert.title('Andela – My Andela WordPress Site', 'Page title is My Andela Wordpress Site');
         return browser;
     };
 
-    //Close the browser
+    //Closes the browser
     this.closeBrowser = function () {
         browser
             .pause(3000)
@@ -34,23 +25,25 @@ const util = function(browser) {
     //Search for a product
     this.searchProduct = function () {
         browser
-            .setValue(homePageSearchBox, productName)
-            .click(searchButton)
+            .setValue(elements.homePageSearchBox, data.productName)
+            .click(elements.searchButton)
             .waitForElementVisible('body', 2000, 'Page loaded successfully')
-            .assert.containsText(productTitle, productName, 'Product title matches searched product');
+            .assert.containsText(elements.productTitle, data.productName, 'Product title matches searched product')
+            .pause(2000);
     };
 
     //Add product to cart
     this.addToCart = function () {
         browser
-            .clearValue(quantityTextBox)
+            .clearValue(elements.quantityTextBox)
             .pause(2000)
-            .setValue(quantityTextBox, quantity)
-            .click(addToCartButton)
+            .setValue(elements.quantityTextBox, data.quantity)
+            .click(elements.addToCartButton)
             .waitForElementVisible('body', 2000, 'Page loaded successfully')
-            .assert.containsText(addToCartSuccessMessageField, addToCartSuccessMessage, 'Add to cart success message is displayed.');
+            .assert.containsText(elements.addToCartSuccessMessageField, data.addToCartSuccessMessage, 'Add to cart success message is displayed.')
+            .pause(2000);
     };
-    
+
     return this;
 };
 

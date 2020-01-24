@@ -8,12 +8,10 @@ module.exports = {
 
     'Search for a product': function(browser) {
       utils(browser).searchProduct();
-      browser.pause(2000);
     },
 
     'Add product to cart': function(browser) {
         utils(browser).addToCart();
-        browser.pause(2000);
       },
 
     after: function (browser) {
