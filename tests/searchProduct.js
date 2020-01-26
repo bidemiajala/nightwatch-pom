@@ -1,4 +1,4 @@
-var utils = require('../page-objects/utils.js');
+const utils = require('../page-objects/utils.js');
 
 module.exports = {
   '@tags': ['Search'],

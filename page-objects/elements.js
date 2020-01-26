@@ -6,5 +6,5 @@ module.exports = {
     productTitle: '#product-741 > div.row.top-content > div.col-md-5.col-xs-12 > div > div > h1',
     quantityTextBox: 'input[title=Qty]',
     addToCartButton: '.single_add_to_cart_button',
-    addToCartSuccessMessageField: '.woocommerce-message'
+    addToCartSuccessMessageField: '.woocommerce-message',
 }
