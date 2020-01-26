@@ -1,4 +1,4 @@
-var utils = require('../page-objects/utils.js');
+var utils = require('../page-objects/utils.js'); //Imports utils.js and assigns it utils
 
 module.exports = {
   '@tags': ['Cart'],
@@ -8,12 +8,10 @@ module.exports = {
 
     'Search for a product': function(browser) {
       utils(browser).searchProduct();
-      browser.pause(2000);
     },
 
     'Add product to cart': function(browser) {
         utils(browser).addToCart();
-        browser.pause(2000);
       },
 
     after: function (browser) {
