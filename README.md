@@ -1,5 +1,5 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9587a070c89246219fc11a63bdaf9193)](https://www.codacy.com/manual/bidemiajala/andela_wp?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bidemiajala/andela_wp&amp;utm_campaign=Badge_Grade)
 # Andela QA Ecercise
-
 ## Objective
 
     1) To explain the test strategy for automating a wordpress CMS site.
