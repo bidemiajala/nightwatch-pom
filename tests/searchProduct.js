@@ -1,12 +1,12 @@
 const utils = require('../page-objects/utils.js');
 
 module.exports = {
-  '@tags': ['Search'],
+  "@tags": ["Search"],
   before: function (browser) {
     utils(browser).openBrowser();
   },
 
-  'Search for a product': function (browser) {
+  "Search for a product": function (browser) {
     utils(browser).searchProduct();
   },
 
